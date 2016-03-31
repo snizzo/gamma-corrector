@@ -22,6 +22,8 @@ private slots:
 
     void on_actionAbout_triggered();
 
+    void on_mouseAccelerationCheckBox_toggled(bool checked);
+
 private:
     Ui::MainWindow *ui;
     QString device;

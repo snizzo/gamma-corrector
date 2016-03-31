@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>749</width>
-    <height>205</height>
+    <height>251</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -35,6 +35,13 @@
       </property>
       <property name="orientation">
        <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QCheckBox" name="mouseAccelerationCheckBox">
+      <property name="text">
+       <string>Disable Mouse Acceleration</string>
       </property>
      </widget>
     </item>

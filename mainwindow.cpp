@@ -66,3 +66,24 @@ void MainWindow::on_actionAbout_triggered()
 {
     QMessageBox::about(this,"About","<h1>Gamma Corrector</h1><br>Claudio Desideri (c) 2016<br><a href=\"mailto:happy.snizzo@gmail.com\">happy.snizzo@gmail.com</a>");
 }
+
+void MainWindow::on_mouseAccelerationCheckBox_toggled(bool checked)
+{
+    if(checked){
+        //spawning process
+        QProcess xrandr;
+        xrandr.start("bash", QStringList() << "-c" << "xset m 00");
+
+        //synchronous execution and output collection
+        if (!xrandr.waitForStarted()){}
+        if (!xrandr.waitForFinished()){}
+    } else {
+        //spawning process
+        QProcess xrandr;
+        xrandr.start("bash", QStringList() << "-c" << "xset m default");
+
+        //synchronous execution and output collection
+        if (!xrandr.waitForStarted()){}
+        if (!xrandr.waitForFinished()){}
+    }
+}
