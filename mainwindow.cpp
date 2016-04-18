@@ -24,7 +24,7 @@ QString MainWindow::getXRandRCurrentOutput()
 {
     //spawning process
     QProcess xrandr;
-    xrandr.start("bash", QStringList() << "-c" << "xrandr | grep primary");
+    xrandr.start("bash", QStringList() << "-c" << "xrandr | grep connected");
 
     //synchronous execution and output collection
     if (!xrandr.waitForStarted()){}
